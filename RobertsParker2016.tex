@@ -110,6 +110,8 @@ groups: -- galaxies: statistics
 
 \subsection{Yang group catalogue}
 
+\subsection{Field catalogue}
+
 \subsection{Group dynamics}
 
 \subsection{Matched data set}
@@ -120,6 +122,42 @@ groups: -- galaxies: statistics
   \caption{}
   \label{fig:dist_m2_s}
 \end{figure*}
+
+To ensure a fair comparison between galaxies in different environments
+(ie.\ field galaxies, galaxies in G groups, and galaxies in NG groups)
+we match our sample of G group galaxies and NG group galaxies by
+stellar mass, redshift, and halo mass.  Additionally, we then match
+our sample of field galaxies by stellar mass and redshift ensuring
+that all of our galaxy samples are matched according to important galaxy
+properties.  This is especially important when trying to elucidate
+information on the effect of group dynamics on galaxy SF and
+morphological properties for
+two main reasons:
+\par
+First, stellar mass, redshift, and halo mass have
+all been shown to influence galaxy SF and morphology (REF); whereas
+the impact of group dynamics has been more difficult to pin down
+(REF) which is perhaps suggestive of a more modest role.  Therefore,
+if one hopes to identify trends in galaxy SF and morphology with group
+dynamics it is crucial to properly control for these other effects.
+\par
+Second, standard statistical normality tests, such as the AD test, are
+inherently biased in identifying non-Gaussian distributions when
+sample size is large.  This is a result of the statistical power of
+the test increasing with sample size which subsequently allows the
+detection of more and more subtle departures from normality.  These subtle
+departures from normality may not be physically relevant (in
+principle, no group is truly Gaussian anyways) and what really matters is
+whether galaxies in groups which show large departures from normality
+have different properties than galaxies in groups which show smaller
+departures from normality. Since group
+richness tends scales with halo mass, in the absence of any matching
+procedure, a sample of NG groups will be biased towards large halo
+masses compared to a similar sample of G groups -- even though many
+high halo mass NG groups may have been identified on the basis of very
+small departures from normality.  Ensuring that our G and NG
+samples have very similar halo mass distributions allows us to make a
+fairer comparison between the two samples.
 
 \begin{figure}
   \centering
