@@ -115,6 +115,53 @@ groups: -- galaxies: statistics
 
 \subsection{Group dynamics}
 
+\begin{figure}
+  \centering
+  \includegraphics[width=\columnwidth]{mhdist_um.pdf}
+  \caption{}
+  \label{fig:mhdist_um}
+\end{figure}
+
+To classify the dynamical state of the haloes in the data set we use a
+combination of two statistical tests, the Anderson-Darling (AD)
+normality test (\citealt{anderson1952}; see \citealt{hou2009, hou2013}
+for an astronomical application) and the Dip test
+(\citealt{hartigan1985}; see \citealt{ribeiro2013} for an astronomical
+application).  The AD test is a non-parametric test of normality based
+upon the comparison between the cumulative distribution function (CDF) of a
+measured data sample and the CDF of a gaussian distribution.  Under
+the assumption that the data is in fact normally distributed, the AD
+test determines the probability ($p$) that the difference between
+the CDFs of the data and a normal distribution equals or exceeds the
+observed difference.  We apply the AD test to the velocity
+distributions of the member galaxies of each group in the data sample,
+thereby broadly classifying the dynamical state of each halo.  Our
+first criteria in classifying a group as G is that the p-value given
+by the AD test be greater than or equal to 0.05.  Our second criteria
+required for a
+group to be classified as G is that it be unimodal.  To specifically
+gauge the modality of the velocity distribution of a given group we
+use the Dip test.  Like the AD test, the Dip test is also a
+non-parametric CDF statistic.  Where they differ is that the Dip test
+looks for a flattening of the CDF for the data which would correspond
+to a `dip' in the distribution being tested.  The Dip test operates
+under the null hypothesis that the data is unimodal, and we consider a
+group velocity distribution unimodal if the Dip test p-value is
+greater than or equal to 0.05.  Therefore our G data sample consists
+of all those groups with $p_{\text{AD}} \ge 0.05$
+\emph{and} $p_{\text{Dip}} \ge 0.05$, whereas our NG data
+sample consists of all those groups with $p_{\text{AD}} < 0.05$
+\emph{or} $p_{\text{Dip}} < 0.05$.
+\par
+After applying the above criteria we find a G sample consisting of
+42655 galaxies within 2447 groups and a NG sample consisting of 5306
+galaxies within 215 groups.  The authors note that simply applying
+these normality criteria in this fashion can lead to the NG sample
+being biased toward rich, high halo mass groups (see
+Fig.~\ref{fig:mhdist_um}).  To address this we
+match of G and NG samples by halo mass (as well as stellar mass and
+redshift), this matching procedure is laid out in the next section.
+
 \subsection{Matched data set}
 
 \begin{figure*}
@@ -196,7 +243,9 @@ Our algorithm for matching the G and NG samples is as follows:
 
 \noindent
 The field sample is subsequently matched to the NG sample following
-the same procedure.  Fig.~\ref{fig:dist_m2_s} shows smoothed density
+the same procedure, the same method is used to account for the
+stochastic nature of the matching procedure.  Fig.~\ref{fig:dist_m2_s}
+shows smoothed density
 distributions of stellar mass, redshift, and halo mass for the matched
 G, NG, and field samples.  Please note that for the remainder of the
 paper all analysis is done using the matched samples, therefore from
@@ -212,10 +261,8 @@ implicitly referencing the matched samples.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Results}
-\label{sec:results}
-
-\subsection{Infalling region}
+\section{Galaxy properties in the infall region}
+\label{sec:infall}
 
 \begin{figure*}
   \centering
@@ -231,7 +278,10 @@ implicitly referencing the matched samples.
   \label{fig:mh_excess}
 \end{figure}
 
-\subsection{Virialized region}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Galaxy properties in the virialized region}
+\label{sec:virial}
 
 \begin{figure*}
   \centering
