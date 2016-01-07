@@ -52,7 +52,7 @@
 % overwriting existing commands. Example:
 %\newcommand{\pcm}{\,cm$^{-2}$}	% per cm-squared
 
-\newcommand{\Msun}{\mathrm{M_{\sun}}}
+\newcommand{\Msun}{\,\mathrm{M_{\sun}}}
 \renewcommand{\labelenumi}{\arabic{enumi}. }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -109,9 +109,73 @@ groups: -- galaxies: statistics
 \section{Data}
 \label{sec:data}
 
-\subsection{Yang group catalogue}
+\subsection{Group sample}
 
-\subsection{Field catalogue}
+For this work we employ the group catalogue of \citet{yang2007}, which
+is constructed by applying the halo-based galaxy group finder from
+\citet{yang2005, yang2007} to the New York University Value-Added
+Galaxy Catalogue (NYU-VAGC; \citealt{blanton2005}).  The NYU-VAGC is a
+low redshift galaxy catalogue (primarily $z \la 0.3$) consisting of
+693319 galaxies derived from the Sloan Digital Sky Survey Data Release
+7 (SDSS-DR7; \citealt{abazajian2009}).  We will briefly describe the
+halo-based group finding algorithm used to generate the Yang group catalogue,
+however for a more complete description the authors direct the reader
+to \citet{yang2005} and \citet{yang2007}.
+\par
+First, the centres of potential groups are identified.  Galaxies are
+initially assigned to groups using a traditional
+``friends-of-friends'' (FOF) algorithm \citep[][e.g.]{huchra1982} with
+very small linking lengths.  The luminosity-weighted centres 
+FOF groups with at least two members are then taken as the centres of
+potential groups and all galaxies not yet associated with a FOF group
+are treated as tentative centres for potential groups.  A
+characteristic luminosity, $L_{19.5}$, defined as the combined
+luminosity of all group members with $^{0.1}M_r - 5\log h \le -19.5$,
+is calculated for each tentative group and an initial halo mass is
+assigned using an assumption for the group mass-to-light ratio,
+$M_H/L_{19.5}$.  Utilizing this tentative group halo mass, velocity
+dispersions and a virial radius are calculated for each group.  Next,
+galaxies are assigned to groups under the assumption that the
+distribution of galaxies in phase space follows that of dark matter
+particles -- the distribution of dark matter particles is taken to
+follow a spherical NFW profile \citep{navarro1997}.  Using the new
+group memberships, group centres are recalculated and the procedure is
+iterated until group memberships no longer change.
+\par
+We take group halo masses, $M_H$, from the Yang catalogue calculated
+using a characteristic group stellar mass, $M_{\star,\text{grp}}$, and
+assuming that there is a one-to-one relation between $M_{\star,\text{grp}}$
+and $M_H$.  \citet{yang2007} define $M_{\star,\text{grp}}$ as
+
+\begin{equation}
+  M_{\star,\text{grp}} = \frac{1}{g(L_{19.5},\,L_{\text{lim}})} \sum_i
+  \frac{M_{\star,i}}{\mathcal{C}_i}
+\end{equation}
+
+\noindent
+where $M_{\star,i}$ is the stellar mass of the $i$th member galaxy,
+$\mathcal{C}_i$ is the completeness of the survey at the position of
+that galaxy, and $g(L_{19.5},\,L_{\text{lim}})$ is a correction factor
+which accounts for galaxies missed due to the magnitude limit of the
+survey.
+\par
+The Yang catalogue contains both haloes which would be broadly classified as
+groups ($10^{12} \la M_H \la 10^{14}\Msun$) as well as clusters ($M_H
+\ga 10^{14}\Msun$), however for brevity we will refer to all haloes as
+groups regardless of halo mass.
+
+\subsection{Field sample}
+
+For this research we also define a sample of ``field'' galaxies.  Like
+the group sample, the field sample is also derived from the NYU-VAGC.
+In order to construct the field sample we cross-match galaxies within
+the Yang group catalogue against all galaxies within the NYU-VAGC
+catalogue, and remove any galaxies which have been identified as being
+members of Yang groups.  Furthermore, we apply an isolation
+criteria and only keep galaxies which are separated from their
+nearest-neighbour by a projected distance of at least
+$0.5\,\mathrm{Mpc}$ and by at least $500\,\mathrm{km/s}$ in
+line-of-sight velocity.
 
 \subsection{Group dynamics}
 
@@ -149,10 +213,10 @@ to a `dip' in the distribution being tested.  The Dip test operates
 under the null hypothesis that the data is unimodal, and we consider a
 group velocity distribution unimodal if the Dip test p-value is
 greater than or equal to 0.05.  Therefore our G data sample consists
-of all those groups with $p_{\text{AD}} \ge 0.05$
-\emph{and} $p_{\text{Dip}} \ge 0.05$, whereas our NG data
-sample consists of all those groups with $p_{\text{AD}} < 0.05$
-\emph{or} $p_{\text{Dip}} < 0.05$.
+of all those groups with $p_{\text{ad}} \ge 0.05$
+\emph{and} $p_{\text{dip}} \ge 0.05$, whereas our NG data
+sample consists of all those groups with $p_{\text{ad}} < 0.05$
+\emph{or} $p_{\text{dip}} < 0.05$.
 \par
 After applying the above criteria we find a G sample consisting of
 42655 galaxies within 2447 groups and a NG sample consisting of 5306
