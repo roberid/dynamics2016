@@ -124,7 +124,7 @@ to \citet{yang2005} and \citet{yang2007}.
 \par
 First, the centres of potential groups are identified.  Galaxies are
 initially assigned to groups using a traditional
-``friends-of-friends'' (FOF) algorithm \citep[][e.g.]{huchra1982} with
+``friends-of-friends'' (FOF) algorithm \citep[e.g.][]{huchra1982} with
 very small linking lengths.  The luminosity-weighted centres 
 FOF groups with at least two members are then taken as the centres of
 potential groups and all galaxies not yet associated with a FOF group
@@ -162,7 +162,9 @@ survey.
 The Yang catalogue contains both haloes which would be broadly classified as
 groups ($10^{12} \la M_H \la 10^{14}\Msun$) as well as clusters ($M_H
 \ga 10^{14}\Msun$), however for brevity we will refer to all haloes as
-groups regardless of halo mass.
+groups regardless of halo mass unless otherwise specified.
+\par
+\textbf{(ADD GALAXY PROPERTIES INFORMATION)}
 
 \subsection{Field sample}
 
@@ -252,9 +254,10 @@ morphological properties for
 two main reasons:
 \par
 First, stellar mass, redshift, and halo mass have
-all been shown to influence galaxy SF and morphology (REF); whereas
-the impact of group dynamics has been more difficult to pin down
-(REF) which is perhaps suggestive of a more modest role.  Therefore,
+all been shown to influence galaxy SF and morphology
+\citep[e.g.][]{brinchmann2004, feulner2005, zheng2007, cucciati2012, wetzel2012, lackner2013, tasca2014}; whereas
+the impact of group dynamics is less clear \citep{hou2013, ribeiro2013} (REF) which is perhaps
+suggestive of a more modest role.  Therefore,
 if one hopes to identify trends in galaxy SF and morphology with group
 dynamics it is crucial to properly control for these other effects.
 \par
@@ -268,7 +271,7 @@ principle, no group is truly Gaussian anyways) and what really matters is
 whether galaxies in groups which show large departures from normality
 have different properties than galaxies in groups which show smaller
 departures from normality. Since group
-richness tends scales with halo mass, in the absence of any matching
+richness generally scales with halo mass, in the absence of any matching
 procedure, a sample of NG groups will be biased towards large halo
 masses compared to a similar sample of G groups -- even though many
 high halo mass NG groups may have been identified on the basis of very
@@ -321,12 +324,79 @@ paper all analysis is done using the matched samples, therefore from
 this point forward any reference to the G or field samples is
 implicitly referencing the matched samples.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Identifying infalling and virialized galaxies}
+\label{sec:rad_div}
+
 \begin{figure}
   \centering
   \includegraphics[width=\columnwidth]{vnorm_r.pdf}
-  \caption{}
+  \caption{Velocity versus projected group-centric radius phase space
+    for galaxies within the G and NG samples.  Virialized (C),
+    backsplash (B), and infalling (A) regions from
+    \citep{mahajan2011} are shown.}
   \label{fig:vnorm_r}
 \end{figure}
+
+Galaxies within group haloes can be broadly classified into three main
+subclasses: galaxies infalling to the group at large radii, galaxies
+virialized within the inner regions of the halo, and galaxies
+backsplashing beyond the virial radius after making a passage through
+the group centre.  In order to understand the radial dependence of
+galaxy properties within groups \textbf{(REF)} it is crucial to be able to
+identify these different galaxy populations
+\citep{gill2005, mahajan2011, pimbblet2011}.
+\par
+The main focus of this paper is the comparison between the three
+galaxy samples (field, G, NG) and to elucidate how the relationship
+between these three samples evolves with the infall state of member
+galaxies.  In particular we will compare star formation and
+morphological properties for galaxies which are infalling into G and
+NG groups to the same properties for galaxies which are virialized
+within G and NG groups.
+\par
+One method used to distinguish between infalling, virialized, and
+backsplash populations is to look for distinct populations in radial
+phase space.  In particular \citet{mahajan2011} follow
+\citet{sanchis2004} and identify galaxies within one virial radius as
+virialized and use the cut
+
+\begin{equation} \label{eq:cut}
+  \frac{v_r}{V_\mathrm{v}} = -1.8 + 1.06
+  \left(\frac{r}{R_\mathrm{v}}\right)
+\end{equation}
+
+\noindent
+to distinguish between infalling and backsplash galaxies.  Where $v_r$
+is the radial velocity of the galaxy, $V_\mathrm{v}$ is the velocity
+dispersion of the group, $r$ is the group-centric radius, and
+$R_\mathrm{v}$ is the virial radius of the group.
+\par
+The cuts described above were determined using full 6-d phase space
+information, however observationally we are limited to line-of-sight
+velocities and projected radii.  Although working in projection
+removes much of the distinct phase space structure \citep{oman2013},
+density contours for the virialized, backsplash, and infalling
+populations still occupy similar regions in projected phase space
+with the contamination between different populations being more substantial
+\citep{mahajan2011}.  While the divisions between populations is
+certainly less clear in projection, equation~\ref{eq:cut} can still be
+used to obtain an approximate division between infalling, virialized,
+and backsplash galaxies -- this approximation is preferred over
+the incorrect assumption that all galaxies beyond the virial radius
+are infalling for the first time.
+\par
+To make the transformation to observational quantities we replace
+$v_r/V_\mathrm{v}$ with $\Delta cz/\sigma$ and $r/R_\mathrm{v}$ with
+$R/R_{200}$ in equation~\ref{eq:cut}.  We also symmetrize the phase
+space cuts to account for projection by using the mirror of
+equation~\ref{eq:cut}.  After implementing these observational
+adjustments, and utilizing the best-fitting scheme from
+\citet{mahajan2011}, we are able to plot in Fig.~\ref{fig:vnorm_r} the
+phase space distribution of galaxies within the G and NG samples
+divided into the infalling (Regions A), backsplash (Region B), and
+virialized (Region C) populations. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -336,14 +406,21 @@ implicitly referencing the matched samples.
 \begin{figure*}
   \centering
   \includegraphics[width=\textwidth]{disk_sfFrac_w2_if.pdf}
-  \caption{}
+  \caption{Star forming and disc fraction versus stellar mass for
+    field galaxies as well as infalling galaxies in the G and NG
+    samples.  Error bars correspond to $1 \sigma$ binomial confidence
+    intervals as given in \citet{cameron2011}, shaded regions are 90
+    per cent Monte Carlo confidence intervals derived from the
+    stochastic nature of the matching procedure.}
   \label{fig:disk_sfFrac_if}
 \end{figure*}
 
 \begin{figure}
   \centering
   \includegraphics[width=\columnwidth]{mh_excess.pdf}
-  \caption{}
+  \caption{Field excess versus stellar mass for galaxies within groups
+  ($10^{12} < M_H < 10^{14} \Msun$) and clusters ($M_H \ge 10^{14}
+    \Msun$).  Mean $1 \sigma$ error bars are shown for each bin.}
   \label{fig:mh_excess}
 \end{figure}
 
@@ -355,7 +432,12 @@ implicitly referencing the matched samples.
 \begin{figure*}
   \centering
   \includegraphics[width=\textwidth]{disk_sfFrac_w2_v.pdf}
-  \caption{}
+  \caption{Star forming and disc fraction versus stellar mass for
+    field galaxies as well as virialized galaxies in the G and NG
+    samples.  Error bars correspond to $1 \sigma$ binomial confidence
+    intervals as given in \citet{cameron2011}, shaded regions are 90
+    per cent Monte Carlo confidence intervals derived from the
+    stochastic nature of the matching procedure.}
   \label{fig:disk_sfFrac_v}
 \end{figure*}
 
