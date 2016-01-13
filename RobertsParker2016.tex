@@ -164,7 +164,53 @@ groups ($10^{12} \la M_H \la 10^{14}\Msun$) as well as clusters ($M_H
 \ga 10^{14}\Msun$), however for brevity we will refer to all haloes as
 groups regardless of halo mass unless otherwise specified.
 \par
-\textbf{(ADD GALAXY PROPERTIES INFORMATION)}
+We calculate group-centric radii for all group members within the
+sample using the redshift of the group angular separation of the galaxy from the
+luminosity-weighted centre of the host halo.  Radii are
+all normalized by the virial radius, $R_{200}$, of the group using the
+definition given in \citet{carlberg1997}
+
+\begin{equation}
+  R_{200} = \frac{\sqrt{3} \sigma}{10 H(z)},
+\end{equation}
+
+\noindent
+where the Hubble parameter, H(z), is defined as
+
+\begin{equation}
+  H(z) = H_0 \sqrt{\Omega_\mathrm{M} (1+z)^3 +
+    \Omega_\mathrm{\Lambda}},
+\end{equation}
+
+\noindent
+and the velocity dispersion, $\sigma$, is calculated using a fitting
+function given in \citet{yang2007}
+
+\begin{equation}
+  \sigma =
+  397.9\,\mathrm{km}\,\mathrm{s^{-1}}\,\left(\frac{M_\text{halo}}{10^{14}\,h^{-1}\Msun}\right)^{0.3214}.
+\end{equation}
+
+To study specific characteristics of galaxies within the group
+sample, we match various public SDSS galaxy catalogues to the group
+sample.  We utilize galaxy stellar masses given in the NYU-VAGC, which
+are obtained through fits to galaxy spectra and broadband photometric
+measurements following the procedure of \citet{blanton2007}.
+\par
+For our star formation indicator we use specific star formation rates
+($SSFR = SFR/M_\star$) from \citet{brinchmann2004}.  These SSFRs are
+primarily derived from emission lines, with an exception for galaxies
+with no clear emission lines or AGN contamination in which case SSFRs
+are based on the 4000 \AA\ break.  SSFRs for galaxies with $\text{S/N}
+> 2$ in H$\alpha$ are determined used only the H$\alpha$ line and
+SSFRs for galaxies with $\text{S/N} > 3$ in all four BPT lines are
+determined using a combination of emission lines.
+\par
+For our morphology indicator we use a global S\'{e}rsic
+index taken from the single component S\'{e}rsic fits in
+\citet{simard2011}.  We also weight all of the data by
+$1/V_\text{max}$ as given in \citet{simard2011} to account for the
+incompleteness of the sample. 
 
 \subsection{Field sample}
 
@@ -178,6 +224,9 @@ criteria and only keep galaxies which are separated from their
 nearest-neighbour by a projected distance of at least
 $0.5\,\mathrm{Mpc}$ and by at least $500\,\mathrm{km/s}$ in
 line-of-sight velocity.
+\par
+The same galaxy parameters which are matched to the group sample are
+also matched to the field sample.
 
 \subsection{Group dynamics}
 
@@ -321,7 +370,7 @@ shows smoothed density
 distributions of stellar mass, redshift, and halo mass for the matched
 G, NG, and field samples.  Please note that for the remainder of the
 paper all analysis is done using the matched samples, therefore from
-this point forward any reference to the G or field samples is
+this point forward any reference to the G, NG, or field samples is
 implicitly referencing the matched samples.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -332,10 +381,10 @@ implicitly referencing the matched samples.
 \begin{figure}
   \centering
   \includegraphics[width=\columnwidth]{vnorm_r.pdf}
-  \caption{Velocity versus projected group-centric radius phase space
+  \caption{Projected radial phase space
     for galaxies within the G and NG samples.  Virialized (C),
     backsplash (B), and infalling (A) regions from
-    \citep{mahajan2011} are shown.}
+    \citet{mahajan2011} are shown.}
   \label{fig:vnorm_r}
 \end{figure}
 
@@ -415,14 +464,91 @@ virialized (Region C) populations.
   \label{fig:disk_sfFrac_if}
 \end{figure*}
 
+We first consider the star forming and morphological properties of
+galaxies infalling (Regions A in Fig.~\ref{fig:vnorm_r}) into both G
+and NG groups, as well as galaxies within the field sample.  In
+Fig.~\ref{fig:disk_sfFrac_if} we plot star forming and disc fraction
+versus stellar mass for the three different galaxy samples.  We define
+star forming galaxies to be all galaxies with $\log SSFR \ge -11$,
+\citet{wetzel2012} show that in the local Universe the division
+between the red sequence and the blue cloud is consistently found at
+$\log SSFR \simeq -11$ across a wide range of halo masses.  Likewise
+we define disc galaxies to be all galaxies having a global S\'{e}rsic
+index of $n \le 1.5$.  While the distribution of S\'{e}rsic index is
+not as clearly bimodal as the SSFR distribution, we find that our
+observed trends are insensitive to our choice of dividing S\'{e}rsic
+index.
+\par
+Inspection of Fig.~\ref{fig:disk_sfFrac_if} reveals certain
+interesting features.  First off, there is no observed difference
+between the star forming or disc fractions for galaxies infalling into
+Gaussian groups compared to galaxies infalling into non-Gaussian
+groups.  This suggests that any influence that the dynamical state
+of the group
+has on star forming or morphological properties is not in place during
+a galaxies first infall toward the virialized region of the halo.
+\par
+We also see a small excess of star forming in the field compared to
+galaxies falling into haloes (although this excess is interestingly
+absent in the lowest mass bin).  When looking as disc fraction, this
+``field excess'' is very marginal and arguably not present at all.
+Previous studies \citep{lewis2002, gray2004, rines2005, verdugo2008}
+have found that star formation of galaxies within infall regions
+remains suppressed compared to the field out to radii on the order of
+$2-3\,R_{200}$.  This suppression is generally attributed to
+backsplash galaxies which have already made a passage through the halo
+centre, the pre-processing of galaxies in small groups prior to
+infall, or some combination of the two.  Using the cuts described in
+Section~\ref{sec:infall} we have attempted to ``clean'' our infall sample
+of backsplashing galaxies, although there is still almost certainly
+some level of contamination.
+\par
+It is expected that pre-processing
+should play a larger role in large clusters compared to smaller
+groups, as a larger fraction of galaxies infalling into clusters will
+have been a part of a group at some time prior to infall.  In
+particular, \citet{hou2014} find that for groups with halo masses $M_H
+< 10^{14}\Msun$ less than 5 per cent of infalling galaxies are a
+part of a subhalo, for clusters with halo masses in the range $10^{14}
+< M_H < 10^{14.5}\Msun$ approximately 10 per cent of infalling galaxies are
+within subhaloes, and for the largest clusters ($M_H >
+10^{14.5}\Msun$) the fraction of infalling galaxies in subhaloes is
+$\sim 25$ per cent.  Using semi-analytic models, \citet{mcgee2009}
+find that the fraction of galaxies which were accreted into the final
+cluster as a member of a halo with $M_H > 10^{13}\,h^{-1}\,\Msun$
+depends strongly on the mass of the ultimate cluster, ranging from
+$\sim 0.1$ for $10^{13.5}\,h^{-1}\,\Msun$ haloes to $\sim 0.45$ for
+haloes with masses of $10^{15}\,h^{-1}\,\Msun$.
+
 \begin{figure}
   \centering
   \includegraphics[width=\columnwidth]{mh_excess.pdf}
   \caption{Field excess versus stellar mass for galaxies within groups
-  ($10^{12} < M_H < 10^{14} \Msun$) and clusters ($M_H \ge 10^{14}
-    \Msun$).  Mean $1 \sigma$ error bars are shown for each bin.}
+  ($10^{12} < M_H < 10^{14} \Msun$; blue) and clusters ($M_H \ge 10^{14}
+    \Msun$; orange).  Solid lines correspond to a field excess in star forming
+    fraction and dashed lines correspond to a field excess in disc
+    fraction.  Mean $1 \sigma$ error bars are shown for each bin.}
   \label{fig:mh_excess}
 \end{figure}
+
+We look for evidence of pre-processing by examining the ``field
+excess'', which we define as the difference in star forming or disc
+fraction between field galaxies and galaxies infalling into haloes,
+for groups and clusters separately.  We use a loose definition of
+groups and clusters based on a halo mass cut, where groups are all
+haloes with $M_H < 10^{14}\Msun$ and conversly clusters are all
+haloes with $M_H \ge 10^{14}\Msun$.  In Fig.~\ref{fig:mh_excess} we
+plot the field excess, in star forming fraction (solid) and disc
+fraction (dashed), versus stellar mass for both groups (blue) and
+clusters (orange).  The field excess is larger for clusters than for
+groups and similar trends are observed whether one considers star
+forming or disc fraction.  This is consistent with pre-processing, as
+the expected
+relatively high degree of pre-processing of galaxies falling into
+clusters would drive a larger deviation from the field population, and
+similarly the lower expected levels of pre-processing for smaller
+groups would lead to little difference between galaxies infalling into
+these groups and galaxies in the field.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
