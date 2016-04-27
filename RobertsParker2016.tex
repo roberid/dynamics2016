@@ -61,7 +61,8 @@
 
 % Title of the paper, and the short title which is used in the headers.
 % Keep the title short and informative.
-\title[]{Title}
+\title[Pre-processing \& dynamical evolution]{Evidence for
+  pre-processing and dynamical evolution for low-mass satellite galaxies}
 
 % The list of authors, and the short list which is used in the headers.
 % If you need two or more lines of authors, add an extra line using \newauthor
@@ -88,6 +89,27 @@ L8S 4M1, Canada
 
 % Abstract of the paper
 \begin{abstract}
+We study the dependence of satellite star formation rate and
+morphology on group dynamics for a sample of SDSS groups.  We classify
+the group dynamics and study satellite properties for populations of
+virialized and infalling galaxies.  For infalling galaxies
+we find no differences in the star-forming or
+disc fraction for those infalling onto Gaussian groups compared to
+those infalling onto non-Gaussian groups.  By comparing the
+star-forming and disc fractions of infalling galaxies to field
+galaxies we find evidence for the pre-processing of both star
+formation rate and morphology.  The strength of pre-processing shows a
+clear increase with halo mass and is highest for low-mass galaxies
+infalling onto high-mass haloes.  When considering galaxies within the
+virialized region of the halo we show that a dependence on group
+dynamical state emerges, with low-mass galaxies in non-Gaussian groups showing
+enhanced star-forming and disc fractions compared to galaxies in
+Gaussian groups.  This suggests that either the
+mechanisms driving star formation quenching and morphological
+transformations within the virial radius are more efficient in
+dynamically relaxed groups, or that non-Gaussian groups have assembled more
+recently and therefore satellites of the groups will have been exposed
+to these transforming mechansims for less time.
 \end{abstract}
 
 % Select between one and six entries from the list of approved keywords.
@@ -106,7 +128,9 @@ groups: -- galaxies: statistics
 
 In the first half of the twentieth century it was beginning to be
 realized that populations of high-mass clusters were predominantly
-made up of early-type galaxies \citep{hubble1931}.  Many subsequent
+made up of early-type galaxies, with \citet{hubble1931} stating that,
+``The predominance of early types is a conspicuous feature of clusters
+in general''.  Many subsequent
 observational studies have cemented the now
 familiar environmental dependence of galaxy properties
 \citep[e.g.][]{butcher1978, dressler1980, postman1984, dressler1999,
@@ -126,10 +150,22 @@ which they reside, but also with radial distance from the halo centre.
 In particular, galaxies at large radii show enhanced star
 formation and are more likely to have spiral morphologies compared to
 galaxies near the centre of halo \citep{whitmore1993, goto2003,
-  postman2005, rasmussen2012, wetzel2012, fasano2015, haines2015}.  Therefore in
-order to probe the environmentally driven aspects of galaxy evolution it is
-crucial to account for both the dependence on the host halo environment as
-well as the radial position within the group or cluster.
+  postman2005, rasmussen2012, wetzel2012, fasano2015, haines2015}.
+Therefore in order to probe the environmentally driven aspects of
+galaxy evolution it is crucial to account for both the dependence on
+the host halo environment as well as the radial position within the
+group or cluster.  Furthermore, one can consider the position
+of galaxies in velocity-radius phase space to divide galaxies into
+three main classes: those infalling onto the cluster, those within the
+virialized region, and those
+``backsplashing'' out to large radii after a passage through the halo
+centre \citep[e.g.][]{mahajan2011}.  Galaxies in these different
+regions can have distinct properties,
+for instance backsplash galaxies should have lower masses due to tidal
+mass loss \citep{gill2005}, infalling galaxies have been shown to have
+enhanced specific star formation rates \citep{noble2016}, and
+post-starburst galaxies seem to occupy intermediate regions in
+phase-space \citep{muzzin2014}.
 \par
 The aforementioned environmental dependences are strongest for
 low-mass galaxies and it appears that properties of high-mass galaxies
@@ -145,11 +181,12 @@ quenching'').
 \par
 While it appears that the majority of low-mass galaxies are primarily quenched
 as satellites, there are still open questions regarding the details of
-the process(es).  One such question is which are the dominant mechanism(s)
-responsible for suppressing star formation in satellite galaxies.
+the process(es) involved.  One such question is which are the dominant
+mechanism(s)
+responsible for suppressing star formation in satellite galaxies?
 Galaxy harassment \citep[e.g.][]{moore1996}, mergers \citep[e.g.][]{mihos1994},
 starvation \citep[e.g.][]{kawata2008}, and ram-pressure stripping
-\citep[e.g.][]{gunn1972} have all been invoked however no concensus
+\citep[e.g.][]{gunn1972} have all been invoked, however no concensus
 exists on their relative importance in different environments.
 Additionally, while all of these mechanisms are capable of
 quenching galaxies (either through inducing rapid star formation and
@@ -163,14 +200,24 @@ would strongly impact morphology, therefore in order to explain the
 observed correlation between galaxy star formation and morphology it
 seems that an additional process to efficiently drive morphological
 transformations is perhaps required \citep[e.g.][]{christlein2004}.
-Another important question is what are
-the characteristic haloes in which most satellite galaxies are
-quenched.  Do galaxies remain actively forming stars until infall onto
-a high-mass cluster, or are galaxies quenched in smaller groups prior
-to cluster infall (known as ``pre-processing'') \citep{fujita2004, mcgee2009, cybulski2014,
-  hou2014, haines2015, just2015}?  Additionally, does this pre-processing only
-affect star formation or are morphological transformations initiated
-in groups prior to cluster infall as well \citep{kodama2001, moran2007}? 
+\par
+Also of importance is determining what are
+the characteristic haloes where most satellite galaxies are
+quenched and experience morphological transformations.  Specifically, whether galaxies remain actively forming
+stars with late-type morphologies until passing the virial radius of high-mass clusters, or
+alternatively if galaxies are transformed in smaller groups prior
+to or during cluster infall (known as ``pre-processing'')
+\citep[e.g.][]{fujita2004}.  Pre-processing is
+often invoked to explain observational results such as passive and
+red fractions at large cluster-centric radii which are enhanced
+significantly relative to the field \citep{lu2012, wetzel2012,
+  bahe2013, haines2015, just2015}, as well as the prevalence of S0
+galaxies in large clusters \citep{kodama2001, helsdon2003, moran2007,
+  wilman2009}.  Studies
+have also found evidence for pre-processing by measuring the fraction
+of galaxies which are part of a group subhalo during infall onto a cluster,
+both using simulations \citep{mcgee2009, delucia2012, bahe2013} and
+observations \citep{dressler2013, hou2014}.
 \par
 This pre-processing and recent infall of galaxies can often imprint
 itself on the dynamical profile of a group or cluster.  For a
@@ -179,17 +226,25 @@ galaxies will resemble a Gaussian distribution.  Whereas groups which
 are dynamically young and unrelaxed tend to display velocity
 profiles which are less Gaussian in nature.  The degree to which
 galaxy properties correlate with the dynamical state of their host
-groups is still very much an open question \citep{biviano2002,
-  ribeiro2010, hou2013, ribeiro2013, ribeiro2013b}.
+groups is still an open question \citep[e.g.][]{biviano2002,
+  ribeiro2013b}.  Previous work has suggested that 
+galaxies in relaxed groups tend to be redder than galaxies in
+unrelaxed groups \citep{ribeiro2010, carollo2013, ribeiro2013}.
+However less work has been done studying the dynamical dependences of
+star-formation and morphology directly.  One example is the work of
+\citet{hou2013} who find no detectable difference between the
+quiescent fractions
+of galaxies in Gaussian versus non-Gaussian groups as a function of redshift.
 \par
-In this paper we investigate the star forming and
-morphological properties of galaxies in the infalling regions of haloes
-compared to
-galaxies in the virialized region at the group centre.  In particular, we study how
-these properties depend on the dynamical state of the host halo, to
-elucidate whether any dependences on dynamical state are in place during
-infall or whether they are not set in place until galaxies move inside
-of the virial radius.
+Previously we have shown that the star formation and morphology of
+low-mass galaxies depends not only on stellar and halo mass but also
+on the X-ray luminosity of the host group \citep{roberts2016}.  Here
+we investigate the dependence of star-forming and 
+morphological properties of galaxies on group dynamical state.  In
+particular, we study these properties within different phase space regions
+of the halo to elucidate whether any dependences on dynamical state
+are in place during infall or whether they are not set in place until
+galaxies move within the virialized region.
 \par
 The outline of this paper is as follows.  In Section~\ref{sec:data} we
 describe sample of galaxies in groups as well as our field sample.  In
@@ -365,7 +420,7 @@ distributions of the member galaxies of each group in the data sample,
 thereby broadly classifying the dynamical state of each halo.  All of
 our groups have eight or more member galaxies, and 85 per cent of our
 groups have five or more member galaxies within the virial radius.  Our
-first criteria in classifying a group as G is that the p-value given
+first criteria in classifying a group as Gaussian (G) is that the p-value given
 by the AD test be greater than or equal to 0.05.
 \par
 Our second criteria required for a
@@ -383,7 +438,7 @@ under the null hypothesis that the data is unimodal, and we consider a
 group velocity distribution unimodal if the Dip test p-value is
 greater than or equal to 0.05.  Therefore our G data sample consists
 of all those groups with $p_{\text{ad}} \ge 0.05$
-\emph{and} $p_{\text{dip}} \ge 0.05$, whereas our NG data
+\emph{and} $p_{\text{dip}} \ge 0.05$, whereas our non-Gaussian (NG) data
 sample consists of all those groups with $p_{\text{ad}} < 0.05$
 \emph{or} $p_{\text{dip}} < 0.05$.
 \par
@@ -418,9 +473,8 @@ To ensure a fair comparison between galaxies in different environments
 (ie.\ field galaxies, galaxies in G groups, and galaxies in NG groups)
 we match our sample of G group galaxies and NG group galaxies by
 stellar mass, redshift, and halo mass.  Additionally, we then match
-our sample of field galaxies by stellar mass and redshift ensuring
-that all of our galaxy samples are matched according to relevant galaxy
-properties.  This is especially important when trying to elucidate
+our sample of field galaxies by stellar mass and redshift.  The
+matching is particularly important when trying to elucidate
 information on the effect of group dynamics on galaxy SF and
 morphological properties for
 two main reasons:
@@ -463,8 +517,8 @@ Our algorithm for matching the G and NG samples is as follows:
     stellar masses within $0.1\,\mathrm{dex}$, redshifts within 0.01,
     and halo masses within $0.1\,\mathrm{dex}$.
 
-  \item Step 1 is repeated continually until no more matches are
-    found, the end result is a list of galaxies from the NG
+  \item Step 1 is repeated until no more matches are
+    found.  The end result is a list of galaxies from the NG
     sample each of which will have one or more matching galaxies from
     the G sample assigned to them
   
@@ -480,11 +534,11 @@ Our algorithm for matching the G and NG samples is as follows:
     we find no changes in the trends observed.
 
   \item In the case where a given galaxy in the NG sample has more
-    than two identified matches, the two matching galaxies from the G sample are
+    than two identified matches, the two matching galaxies from the G
+    sample are
     chosen randomly.  This introduces a stochastic nature to our
     analysis as each generation of the matched G sample will not
-    contain exactly the same galaxies (although in each generation the
-    G and NG samples will indeed be matched).  To account for this, any
+    contain exactly the same galaxies.  To account for this, any
     quantities calculated using the matched G sample are done so in a
     Monte Carlo sense where the median of 1000 stochastic generations
     is quoted along with 90 per cent confidence intervals.
@@ -496,7 +550,7 @@ the same procedure and the same method is used to account for the
 stochastic nature of the matching procedure.  Fig.~\ref{fig:dist_m2_s}
 shows smoothed density
 distributions of stellar mass, redshift, and halo mass for the matched
-G, NG, and field samples.  Please note that for the remainder of the
+G, NG, and field samples.  For the remainder of the
 paper all analysis is done using the matched samples, therefore from
 this point forward any reference to the G, NG, or field samples refers
 to the matched samples.
@@ -514,7 +568,7 @@ to the matched samples.
     space density distribution for all group galaxies, green and
     purple contours correspond to the 68 and 95 per cent density
     regions for G and NG galaxies respectively. Virialized (C),
-    backsplash (B), and infalling (A) regions from
+    backsplash (B), and infalling (A) regions using the cuts defined in
     \citet{mahajan2011} are shown.}
   \label{fig:vnorm_r}
 \end{figure}
@@ -527,15 +581,6 @@ the group centre.  In order to understand the radial dependence of
 galaxy properties within groups it is crucial to be able to
 identify these different galaxy populations
 \citep{gill2005, mahajan2011, pimbblet2011, haines2015, noble2016}.
-\par
-The main focus of this paper is the comparison between the three
-galaxy samples (field, G, NG) and to determine how the relationship
-between these three samples evolves with the dynamical
-states of member galaxies within different radial regions of the halo.
-In particular we will compare star formation and
-morphological properties for galaxies which are infalling onto G and
-NG groups to the same properties for galaxies which are virialized
-within G and NG groups.
 \par
 One method used to distinguish between infalling, virialized, and
 backsplash populations is to look for distinct populations in radial
@@ -567,7 +612,9 @@ certainly less clear in projection, equation~\ref{eq:cut} can still be
 used to obtain an approximate division between infalling, virialized,
 and backsplash galaxies -- this approximation is preferred over
 the incorrect assumption that all galaxies beyond the virial radius
-are infalling for the first time.
+are infalling for the first time.  In particular, at intermediate
+radii, $1 < R < 1.5\,\mathrm{R_{200}}$, as much as 60 per cent of the
+galaxy population could be backsplashing \citep{mahajan2011, hou2014}.
 \par
 To make the transformation to observational quantities we replace
 $v_r/V_\mathrm{v}$ with $\Delta cz/\sigma$ and $r/R_\mathrm{v}$ with
@@ -583,9 +630,6 @@ virialized (Region C) populations.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Galaxy properties in the infall region}
-\label{sec:infall}
-
 \begin{figure*}
   \centering
   \includegraphics[width=\textwidth]{disk_sfFrac95_w2_if.pdf}
@@ -597,6 +641,9 @@ virialized (Region C) populations.
     stochastic nature of the matching procedure for the G and field samples.}
   \label{fig:disk_sfFrac_if}
 \end{figure*}
+
+\section{Galaxy properties in the infall region}
+\label{sec:infall}
 
 We first consider the star-forming and morphological properties of
 galaxies infalling (Regions A in Fig.~\ref{fig:vnorm_r}) onto both G
@@ -617,7 +664,7 @@ observed trends are insensitive to our exact choice of dividing S\'{e}rsic
 index.
 \par
 Inspection of Fig.~\ref{fig:disk_sfFrac_if} reveals certain
-interesting features.  First, there is no observed difference
+interesting features.  First, there is no significant difference
 between the star-forming or disc fractions for galaxies infalling onto
 G groups compared to galaxies infalling onto NG
 groups.  This suggests that any influence that the dynamical state
@@ -629,7 +676,7 @@ disc fractions.
 \par
 We also see only a small excess of star-forming galaxies in the field
 compared to galaxies falling into haloes.  When looking at disc fraction, this
-``field excess'' is very marginal and arguably not present at all.
+``field excess'' is very marginal.
 Previous studies \citep{lewis2002, gray2004, rines2005, verdugo2008}
 have found that star formation of galaxies within infall regions
 remains suppressed compared to the field out to radii on the order of
@@ -638,8 +685,8 @@ backsplash galaxies which have already made a passage through the halo
 centre, the pre-processing of galaxies in small groups prior to
 infall, or some combination of the two.  Using the cuts described in
 Section~\ref{sec:infall} we have attempted to ``clean'' our infall sample
-of backsplashing galaxies, although there is still almost certainly
-some level of contamination due to the lack of full phase space information.
+of backsplashing galaxies, although there is still some level of
+contamination due to the lack of full phase space information.
 \par
 It is expected that pre-processing
 should play a more important role in large clusters compared to smaller
@@ -673,18 +720,18 @@ sample into three halo mass bins: $10^{13} < M_H \le 10^{14}\Msun$,
   $10^{14} < M_H \le 10^{14.5}\Msun$, and $10^{14.5} < M_H \le
   10^{15}\Msun$.  Since we see no strong
 differences between infalling galaxies for G and NG groups in any of
-our halo mass bins (plot not shown), we measure field excess with
+our halo mass bins, we measure field excess with
 respect to the star-forming and
 disc fractions of all infalling galaxies regardless of whether they
 are infalling onto a G or NG group.  In Fig.~\ref{fig:mh_excess}  we show
 the field excess, in star-forming fraction and disc
 fraction, and its dependence on halo mass.  We see that field excess
-tends to increase with halo mass, with a star-forming field excess of up to $\sim
-15$ per cent in rich clusters.  This trend is clearest when
+tends to increase with halo mass, with a star-forming field excess of
+up to $\sim\!15$ per cent in rich clusters.  This trend is clearest when
 considering star-forming fraction and it is less obvious when
 considering disc fraction -- though we do still 
 see an excess of disc galaxies compared to the field for the higher
-halo masses.  This is consistent with pre-processing, as
+halo masses.  The observed field excess is consistent with pre-processing, as
 the expected relatively high degree of pre-processing of galaxies falling into
 clusters would drive a larger deviation from the field population, and
 similarly the lower expected levels of pre-processing for smaller
@@ -695,8 +742,7 @@ observed, we do this to highlight that at these masses the Monte Carlo
 uncertainty due to the stochastic nature of our matching procedure is
 large compared to the statistical errors (see
 Fig.~\ref{fig:disk_sfFrac_if}) and therefore this upturn could simply
-be a result of random fluctuations due to
-low number statistics.
+be a result of random fluctuations.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -729,9 +775,9 @@ the lowest star-forming and
 disc fractions, and galaxies in NG groups have intermediate
 values -- larger star forming and disc fractions than galaxies in G
 groups but significantly smaller than galaxies in the field.
-Moreover, we only observe this dependence on dynamics for galaxies
-$\la 10^{10}\Msun$, for stellar masses higher than this threshold no
-difference is observed between the G and NG samples.  As with the
+Moreover, we only observe this difference between the G and NG samples
+for galaxies $\la 10^{10}\Msun$, for stellar masses higher than this
+threshold no dependence on group dynamics is observed.  As with the
 infalling region (Fig.~\ref{fig:disk_sfFrac_if}), we see qualitatively
 similar trends in both star forming and disc fractions.
 
@@ -740,17 +786,15 @@ similar trends in both star forming and disc fractions.
 \section{Discussion}
 \label{sec:discussion}
 
+\subsection{The impact of group dynamical state}
+
 The question of to what degree group dynamical state influences galaxy
 properties is one which has not yet been conclusively answered.  In
-this study we find that properties of galaxies within the inner
-regions of halos show a slight dependence on group dynamics.  In
+this study we find that properties of low-mass galaxies within the inner
+regions of haloes show a dependence on group dynamics.  In
 particular, we find that galaxies in the virialized region of NG
 groups show an increase in both star-forming and disc fractions
-when compared to galaxies in the same region of G groups.  It is
-informative to now compare our results to those from previous 
-works addressing the influence of group dynamics on galaxy properties
--- both to highlight the similarities as well as to discuss any
-differences.
+when compared to galaxies in the same region of G groups.
 \par
 \citet{carollo2013} study the differences between galaxies in
 `relaxed' and `unrelaxed' groups (defined based upon the presence, or
@@ -768,26 +812,22 @@ bright galaxies ($\mathrm{M_r} \le -20.7$), however find that
 properties of faint galaxies ($-20.7 < \mathrm{M_r} \le -17.9$) do
 depend on whether they live in a G or NG group.  Relevant to this
 work, \citet{ribeiro2013} show that faint galaxies in G groups are
-redder than their NG counterparts and that there is a relatively
-strong radial colour gradient for G galaxies however no such colour
-segregation is seen for galaxies in NG groups.  This is broadly
-consistent with the observed star-forming and disc fraction trends in
-this paper as well as the fact that we see stronger radial evolution
-of these fractions for galaxies in G groups.  We do note that while
-\citet{ribeiro2010} observe that galaxies in G groups have redder
-colours than galaxies in NG groups out to $4\,R_{200}$, in this work
-we only measure a dependence of star-forming and disc fractions on
-group dynamics within the virial radius of the halo.
+redder than their NG counterparts. As well Ribeiro et al. calculate
+mean colours for galaxies in the inner and outer region of the halo
+(dividing the inner and outer halo at the median radius) for G and NG
+groups.  They find that the colours of galaxies in NG groups do not
+change radially, but galaxies in the inner region of G groups are
+redder than those in the outer region.
 \par
 The results of this paper can be used to further constrain the
-influence of group dynamics on the quenching of star formation as well
+connection between group dynamics and the quenching of star formation as well
 as morphological transformations.  The main result that we observe a
 dependence on dynamics in the virialized region of the halo but not
 for galaxies infalling for the first time seems to suggest quenching and
 morphological transformations primarly take
-place within the virial radius, and are somewhat more efficient in G
-groups than NG groups.  Alternatively, the observed excess of star
-forming, disc galaxies in NG groups could be due to the more
+place within the virial radius, and are more efficient in G
+groups than NG groups.  Alternatively, the observed excess of
+star-forming, disc galaxies in NG groups could be due to the more
 dynamically complex NG groups having assembled more recently,
 therefore galaxies in G groups will have been exposed to quenching
 mechanisms within the group environment for longer.  Examination of
@@ -795,62 +835,68 @@ Fig.~\ref{fig:disk_sfFrac_v} shows that very similar trends are observed
 between the virialized G and NG populations when considering either
 star formation or morphology.
 
+\subsection{Pre-processing of infalling galaxies}
+
 \begin{figure}
   \centering
   \includegraphics[width=\columnwidth]{pp_mh.pdf}
   \caption{Pecentage of infalling galaxies which have had
     star-formation (stars) or morphology (circles) pre-processed for
-    both low-mass ($M_\star \la 10^{10.3}\Msun$) and 
-  high-mass ($M_\star \ga 10^{10.3}\Msun$) galaxies, divided into
-  three halo mass bins.  Error bars correspond to $1\sigma$
+    both low-mass ($M_\star \la 10^{10.3}\Msun$, filled markers) and 
+  high-mass ($M_\star \ga 10^{10.3}\Msun$, open markers) galaxies, as
+  a function of halo mass.  Error bars correspond to $1\sigma$
   binomial confidence intervals \citep{cameron2011}.}
   \label{fig:pp_mh}
 \end{figure}
 
 In addition to star formation quenching and morphological
 transformations within the current host halo, we also find evidence
-for pre-processing in both star-forming and disc fraction.  To probe
+for pre-processing in both star formation and morphology.  To probe
 pre-processing we measure the ``field excess'' (ie.\ the degree to
-which star forming and disc fractions are enhanced in the field
+which star-forming and disc fractions are enhanced in the field
 relative to the infalling region of groups).  Assuming that any
 environmentally driven quenching or morphological transformations occur within the virialized region of a halo,
 then the field excess will just correspond to the fraction of
-infalling galaxies which have been pre-processed.  Using this fact we
+infalling galaxies which have been pre-processed.  Using this we
 quantitatively determine the level of pre-processing by computing the
 field excess for low-mass ($M_\star \la
 10^{10.3}\Msun$) and high-mass  ($M_\star \ga 10^{10.3}\Msun$)
 galaxies in our three halo mass bins.  In Fig.~\ref{fig:pp_mh} we plot
 the fraction of low-mass and high-mass infalling galaxies which have
-had star formation
-(stars) or morphology (circles) pre-processed.  We further divide into
+had star formation or morphology pre-processed.  We further divide into
 bins of halo mass to display the halo mass dependence of
 pre-processing.  Both star formation and morphology are pre-processed,
-with the percentage of pre-processed galaxies ranging between $\sim 0$
-and $\sim 15$ per cent when considering star-forming fraction and
-$\sim 0$ and $\sim 10$ per cent when considering disc fraction,
+with the fraction of pre-processed galaxies ranging between $\sim\!0$
+and $\sim\!15$ per cent when considering star-forming fraction and
+$\sim\!0$ and $\sim\!10$ per cent when considering disc fraction,
 depending on stellar and halo mass.  Low-mass
-galaxies showing stronger pre-processing than their high-mass
+galaxies show stronger pre-processing than their high-mass
 counterparts and the
-strength of pre-processing increases with halo mass.  The effect of
-pre-processing on disc fraction is consistently weaker than for
-star-forming fraction, though still significant. 
+strength of pre-processing increases with halo mass. 
+\par
 Prior studies have aimed to constrain the
 fraction of pre-processed galaxies both observationally and using
 simulations.  One common approach is to measure the fraction of
 galaxies which fall onto a cluster as a member of a smaller group,
 either directly using simulations or by measuring substructure or
 clustering observationally.  For clusters with mass $\sim
-10^{14}\Msun$ \citet{delucia2012} use semi-analytic models (SAMs) and find
+\!10^{14}\Msun$ \citet{delucia2012} use semi-analytic models (SAMs) and find
 that the fraction of satellite galaxies which are accreted in groups
 with $M_H \ga 10^{13}\Msun$ is highest for low-mass galaxies,
-corresponding to $\sim 28$ per cent.  Also using SAMs,
+corresponding to $\sim\!28$ per cent.  Also using SAMs,
 \citet{mcgee2009} find that the fraction of galaxies accreted onto the
 ultimate cluster as members of $\ga 10^{13}\,h^{-1}\Msun$ groups depends
-strongly on the cluster halo mass, ranging from $\sim 0.1$ for
-$10^{13.5}\,h^{-1}\Msun$ haloes to $\sim 0.45$ for haloes with masses
-of $10^{15}\,h^{-1}\Msun$.  Observationally, \citet{hou2014} use the
+strongly on the cluster halo mass, ranging from $\sim\!0.1$ for
+$10^{13.5}\,h^{-1}\Msun$ haloes to $\sim\!0.45$ for haloes with masses
+of $10^{15}\,h^{-1}\Msun$.  \citet{bahe2013} use the \textsc{gimic}
+suite of zoom in simulations and find that the fraction of galaxies
+which have been satellites of a $>\!10^{13}\Msun$ halo prior to accretion
+onto the ultimate host ranges from $<10$ per cent for a host with halo
+mass $<\!10^{13.5}\Msun$, up to as high as $\sim\!60$ per cent for a
+host halo mass of $10^{15.2}\Msun$.
+Observationally, \citet{hou2014} use the
 Dressler-Schectman test \citep{dressler1988} to identify infalling
-subhaloes and find for $<10^{14}\Msun$ groups that less than 5 per
+subhaloes and find for $<\!10^{14}\Msun$ groups that less than 5 per
 cent of infalling galaxies are part of a subhalo, whereas for haloes
 with masses $10^{14} < M_H < 10^{14.5}\Msun$ and $M_H >
 10^{14.5}\Msun$ the fraction of galaxies infalling in subhaloes is
@@ -865,8 +911,41 @@ quote.  This is because only some fraction of galaxies within subhaloes
 during infall will actually have been pre-processed, whereas the
 field excess more closely measures the fraction of galaxies
 which have actually been pre-processed.  Therefore the fact that our
-values for the fraction of pre-processd galaxies are consistently
+values for the fraction of pre-processed galaxies are consistently
 smaller than the quoted subhalo fractions is entirely consistent.
+\par
+Studying the star-forming fractions of cluster galaxies,
+\citet{haines2015} use a simple toy model in an attempt to reproduce the
+trend between cluster-centric radius and star-forming fraction.  They
+find that in order to reproduce the observational trend, a $19$ per
+cent decrease in the star-forming fraction of cluster galaxies relative to
+the field is required on top of star
+formation quenching occuring within the virial radius.  Haines et
+al. suggest that pre-processing is a possible mechanism to generate
+this $19$ per cent decrease.  In this work we find that the fraction of
+high-mass (the Haines et al. sample consists of galaxy stellar masses
+$>\!2 \times 10^{10.2}\Msun$) pre-processed galaxies for high-mass
+clusters is $8 \pm 3$ per cent.  Therefore, this work is not able to
+account for the amount of pre-processing required by the
+\citet{haines2015} model.
+\par
+At $\sim\!z=0.2$, \citet{lu2012} find that blue fractions of low and
+intermediate-mass cluster galaxies are lower than the field values
+(for the appropriate stellar mass) out to radii of $7\,\mathrm{Mpc}$, however
+the most massive galaxies
+show no difference from the field.  This is similar to the stellar
+mass trends observed in this work where we only see strong
+pre-processing for low-mass galaxies.
+\par
+Evidence for the pre-processing of both star formation and/or morphology is
+something that has been seen in recent literature, and seeing as we detect the
+pre-processing of
+both star formation and morphology in this work it is interesting to
+compare the level of pre-processing between the two.  In
+general we find that the fraction of low-mass galaxies which have been
+morphologically pre-processed is slightly smaller than the fraction of
+low-mass galaxies which have had their star formation pre-processed,
+this is consisent across our different halo mass bins.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
